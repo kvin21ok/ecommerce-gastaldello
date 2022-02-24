@@ -2,6 +2,8 @@
 import './App.css';
 import './Components/NavBar.css';
 import Navigation from './Components/NavBar';
+import './Components/CartWidget.css';
+import ItemList from './Components/ItemListContainer';
 
 function App() {
 
@@ -10,7 +12,8 @@ function App() {
     <div className="App">
       
       <Navigation/>
-
+      <ItemList/>
+        
     </div>
   );
 }

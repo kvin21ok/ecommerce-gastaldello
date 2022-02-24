@@ -1,9 +1,12 @@
 ul{
+    background-color: black;
     text-align: left;
 }
 a{
+    color: white;
     padding: 2em;
 }
-h3{
-    text-align: left;
+#ecommerceName{
+    padding-left: 0;
+    font-size: 3em;
 }
