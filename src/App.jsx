@@ -7,13 +7,12 @@ import ItemList from './Components/ItemListContainer';
 
 function App() {
 
-
   return (
     <div className="App">
       
       <Navigation/>
       <ItemList/>
-        
+      
     </div>
   );
 }
