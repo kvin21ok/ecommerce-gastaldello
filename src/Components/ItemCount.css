@@ -1,0 +1,9 @@
+#counter{
+    display: grid;
+    grid-template-columns: 33% 33% 33%;
+    grid-template-rows: 50% 50%;
+    height: 5em;
+    width: 20em;
+    border: 2px double;
+    margin-left: 39vw;
+};

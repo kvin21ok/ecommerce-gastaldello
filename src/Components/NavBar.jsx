@@ -1,7 +1,7 @@
 import React from "react";
 import CarritoImg from "./CartWidget";
 
-const Navigation =  ()=>{
+const NavBar =  ()=>{
     return(
         <div>
             <ul>
@@ -15,4 +15,4 @@ const Navigation =  ()=>{
         </div>
     )
 }
-export default Navigation
+export default NavBar

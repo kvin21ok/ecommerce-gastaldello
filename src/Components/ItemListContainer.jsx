@@ -1,9 +1,13 @@
 import React from "react";
+import ItemCount from "./ItemCount";
 
-const ItemList = ()=>{
+const ItemListContainer = ({ greetings })=>{
     return(
-        `Hola, dentro de poco si dios quiere seré una lista de catalogo o lo que se le ocurra a mi creador :)`
+        <div>
+            <h3>{ greetings }</h3>
+            <ItemCount/>
+        </div>
     )
 };
 
-export default ItemList;
+export default ItemListContainer;
