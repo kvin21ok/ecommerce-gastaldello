@@ -5,6 +5,7 @@ import NavBar from './Components/NavBar';
 import './Components/CartWidget.css';
 import ItemListContainer from './Components/ItemListContainer';
 import './Components/ItemCount.css';
+import './Components/Item.css';
 
 function App() {
 
@@ -12,7 +13,7 @@ function App() {
     <div className="App">
       
       <NavBar/>
-      <ItemListContainer greetings = 'Hola! dentro de poco deberia convertirme en algo'/>
+      <ItemListContainer greetings = 'Hola! Bienvenidos a EL EMPORIO'/>
       
     </div>
   );

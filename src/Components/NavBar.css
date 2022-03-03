@@ -1,10 +1,11 @@
 ul{
-    background-color: black;
+    background-image: linear-gradient(to right, navy, rgb(145, 145, 14), white);
     text-align: left;
 }
 a{
     color: white;
     padding: 2em;
+    text-decoration: none;
 }
 #ecommerceName{
     padding-left: 0;

@@ -5,7 +5,7 @@ const NavBar =  ()=>{
     return(
         <div>
             <ul>
-                <a id="ecommerceName">ecommerce</a>            
+                <a id="ecommerceName">EL EMPORIO</a>            
                 <a href ="#">inicio</a>
                 <a href ="#">ofertas</a>
                 <a href ="#">catalogos</a>

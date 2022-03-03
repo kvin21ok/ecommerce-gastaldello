@@ -1,10 +1,10 @@
 import React from "react";
 import Item from "./Item";
 
-const ItemList = (Item)=>{
+const ItemList = ()=>{
     return(
         <div>
-            {Item}
+            <Item/>
         </div>
     )
 };
