@@ -5,7 +5,7 @@ import { getFetch, Products,} from "../helpers/getFetch";
 import ItemCount from "./ItemCount";
 
 const Item = ()=>{
-    const [productos, setProductos] = useState([])
+    const [productos, setProductos] = useState ([])
     const [loading, setLoading] = useState (true)
 
     useEffect(()=>{
@@ -22,7 +22,7 @@ const Item = ()=>{
 
     return(
         <div>
-            { loading ? <h1>Cargando...</h1> 
+            { loading ? <h1>Aguarde un momento...</h1> 
             :
             Products.map((prod)=> <li key={prod.id} className = "item"> {prod.name} {prod.price} {prod.pictureUrl} <ItemCount/> </li>)}
         </div>
