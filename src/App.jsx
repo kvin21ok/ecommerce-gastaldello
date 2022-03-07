@@ -5,7 +5,6 @@ import NavBar from './Components/NavBar';
 import './Components/CartWidget.css';
 import ItemListContainer from './Components/ItemListContainer';
 import './Components/ItemCount.css';
-import './Components/Item.css';
 
 function App() {
 

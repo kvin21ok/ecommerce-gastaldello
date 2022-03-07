@@ -1,26 +1,23 @@
 import {React, useState} from "react";
 
-const ItemCount = ()=>{
-    const [initial, setInitial] = useState (0);
+const ItemCount = ({initial, stock, onAdd})=>{
+    const [count, setCount] = useState (initial);
 
     const plus = ()=>{
-        setInitial(initial+1)
+        count < stock && setCount(count + 1)
     };
 
     const minus = ()=>{
-        setInitial(initial-1)
-    };
-    const buy = ()=>{
-        setInitial(0)
+        count > 0 && setCount(count - 1)
     };
 
     return(
         <div id="counter">
-            <button onClick= {minus}>Quitar 1 cantidad</button>
-            <label>{ initial }</label>
-            <button onClick= {plus}>Sumar 1 cantidad</button>
+            <button onClick= {minus} title= "Quitar">Quitar 1 cantidad</button>
+            <label>{ count }</label>
+            <button onClick= {plus} title= "Agregar">Sumar 1 cantidad</button>
             <br/>
-            <button onClick= {buy}>Comprar!</button>
+            <button onClick= {() => onAdd(count)}>Al carrito! </button>
         </div>
     )
 };

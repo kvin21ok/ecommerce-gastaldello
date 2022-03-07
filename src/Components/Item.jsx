@@ -1,30 +1,18 @@
 import React from "react";
-import { useState } from "react";
-import { useEffect } from "react";
-import { getFetch, Products,} from "../helpers/getFetch";
 import ItemCount from "./ItemCount";
 
-const Item = ()=>{
-    const [productos, setProductos] = useState ([])
-    const [loading, setLoading] = useState (true)
-
-    useEffect(()=>{
-        getFetch
-        .then((respuesta)=>{
-        return respuesta
-        })
-        .then((res) => setProductos(res))
-        .catch(err => console.log(err))
-        .finally(()=> setLoading(false))
-
-    },[])
-    console.log(productos)
+const Item = ({name, price, pictureUrl})=>{
+    const onAdd = (item) => console.log(item);
 
     return(
         <div>
-            { loading ? <h1>Aguarde un momento...</h1> 
-            :
-            Products.map((prod)=> <li key={prod.id} className = "item"> {prod.name} {prod.price} {prod.pictureUrl} <ItemCount/> </li>)}
+            <h3> {name} </h3>
+
+            <img src={pictureUrl} alt={name} />
+
+            <p> {price} </p>
+
+            <ItemCount initial={0} stock={10} onAdd={onAdd} />
         </div>
     )
 }
