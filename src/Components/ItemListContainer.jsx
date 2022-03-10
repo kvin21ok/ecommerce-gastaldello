@@ -18,7 +18,9 @@ const ItemListContainer = ()=>{
         },[])
         console.log(productos)
 
-    return loading ? <p> Cargando... </p> : <ItemList productos={productos} />;
+    return (
+        loading ? <p> Cargando... </p> : <ItemList productos={productos} />
+        );
 };
 
 export default ItemListContainer;

@@ -1,10 +1,10 @@
-
+import NavBar from './Components/NavBar';
+import ItemListContainer from './Components/ItemListContainer';
+import './Components/CartWidget.css';
+import ItemDetailContainer from './Components/ItemDetailContainer';
+import './Components/ItemCount.css';
 import './App.css';
 import './Components/NavBar.css';
-import NavBar from './Components/NavBar';
-import './Components/CartWidget.css';
-import ItemListContainer from './Components/ItemListContainer';
-import './Components/ItemCount.css';
 
 function App() {
 
@@ -13,6 +13,7 @@ function App() {
       
       <NavBar/>
       <ItemListContainer greetings = 'Hola! Bienvenidos a EL EMPORIO'/>
+      <ItemDetailContainer/>
       
     </div>
   );
