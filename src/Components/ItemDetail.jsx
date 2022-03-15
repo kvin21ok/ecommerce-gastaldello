@@ -1,19 +1,19 @@
 import React from "react";
 import ItemCount from "./ItemCount";
 
-const ItemDetail = ({ name, price, pictureUrl, description })=>{
+const ItemDetail = ({ producto })=>{
     const onAdd = (item) => console.log(item);
     
     return(
         <div>
             
-            <h4> {name} </h4>
+            <h4> {producto.name} </h4>
 
-            <p> {price} </p>
+            <p> {producto.price} </p>
 
-            <img src={pictureUrl} alt={name} height="200px" />
+            <img src={producto.pictureUrl} alt={producto.name} height="200px" />
 
-            <p> {description} </p>
+            <p> {producto.description} </p>
 
             <ItemCount initial={0} stock={10} onAdd={onAdd} />
 

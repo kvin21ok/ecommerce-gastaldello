@@ -2,13 +2,15 @@ import React from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-const Item = ({name, price, pictureUrl, id})=>{
+const Item = ({name, price, pictureUrl, id, category})=>{
     const onAdd = (item) => console.log(item);
 
     return(
         <div>            
 
             <h3> {name} </h3>
+
+            <h5> {category} </h5>
 
             <img src={pictureUrl} alt={name} height ="300px" />
 
