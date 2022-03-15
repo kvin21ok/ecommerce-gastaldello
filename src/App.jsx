@@ -1,7 +1,9 @@
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
-import './Components/CartWidget.css';
 import ItemDetailContainer from './Components/ItemDetailContainer';
+import Cart from './Components/Cart';
+import './Components/CartWidget.css';
 import './Components/ItemCount.css';
 import './App.css';
 import './Components/NavBar.css';
@@ -9,13 +11,21 @@ import './Components/NavBar.css';
 function App() {
 
   return (
-    <div className="App">
-      
-      <NavBar/>
-      <ItemListContainer greetings = 'Hola! Bienvenidos a EL EMPORIO'/>
-      <ItemDetailContainer/>
-      
-    </div>
+
+    <BrowserRouter>
+      <div className="App">
+        <NavBar/>
+        <Routes>
+          <Route path= '/' element= {<ItemListContainer greetings = 'Hola! Bienvenidos a EL EMPORIO'/>}/>
+          <Route path= '/category/:categoryName' element= {<ItemListContainer greetings = 'Hola! Bienvenidos a EL EMPORIO'/>}/>
+          <Route path= '/detail/:detailId' element= { <ItemDetailContainer/> }/>
+          <Route path= '/cart' element = { <Cart/> } />
+
+          <Route path= '/*' element= { <Navigate to= '/' replace /> }/>       
+        </Routes>
+      </div>
+    </BrowserRouter>
+
   );
 }
 

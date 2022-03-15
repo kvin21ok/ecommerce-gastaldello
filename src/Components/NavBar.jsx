@@ -1,16 +1,18 @@
 import React from "react";
+import { NavLink } from "react-router-dom";
 import CarritoImg from "./CartWidget";
 
 const NavBar =  ()=>{
     return(
         <div>
             <ul>
-                <a id="ecommerceName">EL EMPORIO</a>            
-                <a href ="#">inicio</a>
-                <a href ="#">ofertas</a>
-                <a href ="#">catalogos</a>
-                <a href ="#">contactanos</a>
-                <a href = "#"><CarritoImg/></a>
+                <NavLink to="/" id="ecommerceName"> EL EMPORIO DEL BAJON </NavLink>
+                <NavLink to="category/:HAMBURGUESAS"> HAMBURGUESAS</NavLink>
+                <NavLink to="category/:PIZZAS"> PIZZAS</NavLink>
+                <NavLink to="category/:PAPAS FRITAS"> PAPAS FRITAS</NavLink>
+                <NavLink to="category/:EMPANADAS"> EMPANADAS</NavLink>
+                <NavLink to="category/:BEBIDAS"> BEBIDAS</NavLink>
+                <NavLink to="/cart"> <CarritoImg/> </NavLink>
             </ul>
         </div>
     )
