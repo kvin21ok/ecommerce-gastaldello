@@ -3,6 +3,7 @@ import NavBar from './Components/NavBar';
 import ItemListContainer from './Components/ItemListContainer';
 import ItemDetailContainer from './Components/ItemDetailContainer';
 import Cart from './Components/Cart';
+import { CartContext } from './Context/CartContext';
 import './Components/CartWidget.css';
 import './Components/ItemCount.css';
 import './App.css';
@@ -11,6 +12,10 @@ import './Components/NavBar.css';
 function App() {
 
   return (
+
+    <CartContext.Provider value ={{
+      
+    }}>
 
     <BrowserRouter>
       <div className="App">
@@ -25,6 +30,8 @@ function App() {
         </Routes>
       </div>
     </BrowserRouter>
+
+    </CartContext.Provider>
 
   );
 }
