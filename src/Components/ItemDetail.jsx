@@ -6,6 +6,7 @@ const ItemDetail = ({ producto })=>{
     const [count, setCount] = useState (null)
 
     const onAdd = (cantidad) => {
+        
         console.log(cantidad);
         setCount (cantidad);
     }
