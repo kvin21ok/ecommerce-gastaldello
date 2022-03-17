@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import ItemCount from "./ItemCount";
 
-const Item = ({name, price, pictureUrl, id, category})=>{
+const Item = ({name, price, pictureUrl, id, category, stock})=>{
     const [count, setCount] = useState (null)
 
     const onAdd = (cantidad) =>{
@@ -34,7 +34,7 @@ const Item = ({name, price, pictureUrl, id, category})=>{
 
                 <Link to= {`detail/${id}`}> <button> Ver detalles de {name} </button> </Link>
                 
-                <ItemCount initial={1} stock={10} onAdd={onAdd} />
+                <ItemCount initial={1} stock={stock} onAdd={onAdd} />
 
             </div>
             
