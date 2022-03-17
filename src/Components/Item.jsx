@@ -18,7 +18,7 @@ const Item = ({name, price, pictureUrl, id, category})=>{
 
             <Link to= {`detail/${id}`}> <button> Ver detalles </button> </Link>
 
-            <ItemCount initial={0} stock={10} onAdd={onAdd} />
+            <ItemCount initial={1} stock={10} onAdd={onAdd} />
 
         </div>
     )

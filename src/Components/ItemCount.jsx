@@ -8,8 +8,12 @@ const ItemCount = ({initial, stock, onAdd})=>{
     };
 
     const minus = ()=>{
-        count > 0 && setCount(count - 1)
+        count > 1 && setCount(count - 1)
     };
+
+    const add = ()=>{
+        add (count)
+    }
 
     return(
         <div id="counter">
@@ -17,7 +21,7 @@ const ItemCount = ({initial, stock, onAdd})=>{
             <label>{ count }</label>
             <button onClick= {plus} title= "Agregar">Sumar 1 cantidad</button>
             <br/>
-            <button onClick= {() => onAdd(count)}>Al carrito! </button>
+            <button onClick= {() => onAdd(count)}>Agregar al carrito! </button>
         </div>
     )
 };
