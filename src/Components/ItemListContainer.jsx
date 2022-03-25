@@ -8,15 +8,15 @@ const ItemListContainer = ()=>{
 
         const [loading, setLoading] = useState (true);
 
-        const { categoryName } = useParams ();
+        const { categoryId } = useParams ();
     
         useEffect(()=>{
-            if (categoryName){
+            if (categoryId){
                 getFetch
                 .then((respuesta)=>{
                 return respuesta
                 })
-                .then((res) => setProductos(res.filter(prod => prod.category=== categoryName)))
+                .then((res) => setProductos(res.filter(prod => prod.category=== categoryId)))
                 .catch(err => console.log(err))
                 .finally(()=> setLoading(false))
             }else{
@@ -29,9 +29,9 @@ const ItemListContainer = ()=>{
             .finally(()=> setLoading(false))
         }
     
-        },[categoryName])
+        },[categoryId])
         console.log(productos);
-        console.log(categoryName);
+        console.log(categoryId);
 
     return (
         loading ? <p> Cargando... </p> : <ItemList productos={productos} />
