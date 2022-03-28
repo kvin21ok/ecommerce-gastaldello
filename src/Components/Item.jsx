@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { useCartContext } from "../Context/CartContext";
 
@@ -13,9 +13,9 @@ const Item = ({name, price, pictureUrl, id, category})=>{
 
             <h5> {category} </h5>
 
-            <img src={pictureUrl} alt={name} height ="300px" />
+            <img src={pictureUrl} alt={name} height ="100px" />
 
-            <p> {price} </p>
+            <p> ${price} </p>
 
             {inCart(id) ?
                 <Link to="/cart"><button>Este producto ya esta añadido en el carrito, vamos alla!</button></Link>

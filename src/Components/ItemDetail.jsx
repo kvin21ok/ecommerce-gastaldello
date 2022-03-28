@@ -22,9 +22,9 @@ const ItemDetail = ({ producto })=>{
             
             <h4> {producto.name} </h4>
 
-            <p> {producto.price} </p>
+            <p> ${producto.price} </p>
 
-            <img src={producto.pictureUrl} alt={producto.name} height="200px" />
+            <img src={producto.pictureUrl} alt={producto.name} height="300px" />
 
             <p> {producto.description} </p>
 

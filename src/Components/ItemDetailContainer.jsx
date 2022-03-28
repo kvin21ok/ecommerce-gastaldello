@@ -1,7 +1,7 @@
 import  { React, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getFetch } from "../helpers/getFetch";
 import ItemDetail from "./ItemDetail";
+import { doc, getDoc, getFirestore } from "firebase/firestore"
 
 const ItemDetailContainer = ()=>{
     const [producto, setProducto] = useState({});
@@ -12,13 +12,15 @@ const ItemDetailContainer = ()=>{
     console.log(detailId);
 
 
-    useEffect( ()=>{
-        getFetch
-        .then(resp => setProducto (resp.find(prod => prod.id === detailId)))
+    useEffect(()=>{
+        const db = getFirestore()
+        const queryDb = doc (db, 'items', detailId)
+        getDoc(queryDb)
+        .then(resp => setProducto({id: resp.id, ...resp.data()}))
         .finally(()=>setLoad(false))
-    }, [detailId])
+    },[detailId])
     console.log(producto)
-
+    
     return (
         load ? <p> Cargando detalles...</p>:
         

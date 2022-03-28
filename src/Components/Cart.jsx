@@ -18,9 +18,9 @@ const Cart = ()=>{
                 </div>
             :
                 <div>
-                    {cartList.map(item => <li> {item.name} / {item.cantidad} / precio por unidad: {item.price} <button onClick={deleteItem}>Quitar del carro</button> </li>)}
+                    {cartList.map(item => <li> {item.name} / {item.cantidad} / precio por unidad: {item.price} <button onClick={ ()=> deleteItem (item.id) }>Quitar del carro</button> </li>)}
 
-                    <h3> Monto Total: {total} </h3>
+                    <h3> Monto Total: $ { total() } </h3>
 
                     <button onClick={deleteCart}>Vaciar carro</button> <button>Comprar</button>
                 </div>   
