@@ -9,7 +9,6 @@ const ItemDetailContainer = ()=>{
     const [load, setLoad] = useState (true);
 
     const { detailId } = useParams ()
-    console.log(detailId);
 
 
     useEffect(()=>{
@@ -19,7 +18,6 @@ const ItemDetailContainer = ()=>{
         .then(resp => setProducto({id: resp.id, ...resp.data()}))
         .finally(()=>setLoad(false))
     },[detailId])
-    console.log(producto)
     
     return (
         load ? <p> Cargando detalles...</p>:

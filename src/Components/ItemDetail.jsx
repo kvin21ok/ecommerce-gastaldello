@@ -7,7 +7,7 @@ import { useCartContext } from "../Context/CartContext";
 const ItemDetail = ({ producto })=>{
     const [count, setCount] = useState (null)
 
-    const {addCart, cartList, inCart} = useCartContext()
+    const {addCart, inCart} = useCartContext()
 
     const onAdd = (cant) => {
         
@@ -15,7 +15,6 @@ const ItemDetail = ({ producto })=>{
         setCount (cant);
         addCart ({...producto, cantidad:cant})
     }
-    console.log(cartList)
     
     return(
         <div>
