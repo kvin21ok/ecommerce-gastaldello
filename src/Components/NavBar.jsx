@@ -7,7 +7,7 @@ const NavBar =  ()=>{
 
     const {totalItem} = useCartContext ()
     return(
-        <div>
+        <div id = "navbar">
             <ul>
                 <NavLink to="/" id="ecommerceName"> EL EMPORIO DEL BAJON </NavLink>
                 <NavLink to="category/:hamburguesas"> HAMBURGUESAS</NavLink>

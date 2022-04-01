@@ -28,15 +28,25 @@ const ItemDetail = ({ producto })=>{
             <p> {producto.description} </p>
 
             { inCart(producto.id) ?
+                <div>
+                    <Link to="/cart"><button>Este producto ya esta añadido en el carrito, vamos alla!</button></Link>
 
-                <Link to="/cart"><button>Este producto ya esta añadido en el carrito, vamos alla!</button></Link>
+                    <Link to= "/"><button>Volver al home</button></Link>
+                </div>
             :
 
                 count ? 
+                    <div>
+                        <Link to="/cart"><button>Terminar compra e ir al carrito!</button></Link>
 
-                    <Link to="/cart"><button>Terminar compra e ir al carrito!</button></Link>
+                        <Link to= "/"><button>Volver al home</button></Link>
+                    </div>
                 :
-                    <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} />
+                        <div>
+                        <ItemCount initial={1} stock={producto.stock} onAdd={onAdd} />
+
+                        <Link to= "/"><button>Volver al home</button></Link>
+                    </div>
             
             }
 
